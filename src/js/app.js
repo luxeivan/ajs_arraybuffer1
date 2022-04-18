@@ -1,7 +1,5 @@
-import orderbyprops from './orderbyprops';
-import destructuring from './destructuring';
-import Validator from './validator';
+import Daemon from './daemon';
+import Magician from './magician';
 
-window.validator = new Validator();
-window.orderbyprops = orderbyprops;
-window.destructuring = destructuring;
+window.daemon = new Daemon();
+window.magician = new Magician();
