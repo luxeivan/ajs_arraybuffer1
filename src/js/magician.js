@@ -1,5 +1,5 @@
-import Personage from "./personage";
+import Personage from './personage';
 
-export default class Magician extends Personage{
-    
+export default class Magician extends Personage {
+
 }
