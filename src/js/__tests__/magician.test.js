@@ -2,12 +2,15 @@ import Magician from '../magician';
 
 test('Magician getAttack', () => {
   const magician = new Magician();
-  const result = magician.getAttack(100, 2);
-  expect(result).toBe(90);
+  magician.stoned = true;
+  magician.attack = 100;
+  const result = magician.attack;
+  expect(result).toBe(85);
 });
 
-test('Magician getStoned', () => {
+test('Magician getAttack', () => {
   const magician = new Magician();
-  const result = magician.getStoned(100, 2);
-  expect(result).toBe(85);
+  magician.stoned = true;
+  const result = magician.stoned;
+  expect(result).toBe(true);
 });

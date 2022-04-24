@@ -1,26 +1,25 @@
 export default class Personage {
   constructor() {
-    this.attack = 0;
-    this.stoned = false;
     this.distance = 2;
   }
 
   get attack() {
-    const attack = this.attack - this.attack / 10 * (this.distance - 1);
-    if (this.stoned) {
+    let attack = this.attackProp - (this.attackProp / 10) * (this.distance - 1);
+    if (this.stonedProp) {
       attack = Math.round(attack - Math.log2(this.distance) * 5);
     }
-    return attack
+    return attack;
   }
-  set attack(attack) {
-    this.attack = attack;
+
+  set attack(value) {
+    this.attackProp = value;
   }
 
   get stoned() {
-    return this.stoned;
+    return this.stonedProp;
   }
 
-  set stoned(stoned) {
-    this.stoned = stoned;
+  set stoned(value) {
+    this.stonedProp = value;
   }
 }

@@ -1,13 +1,16 @@
 import Daemon from '../daemon';
 
-test('Magician getAttack', () => {
+test('daemon getAttack', () => {
   const daemon = new Daemon();
-  const result = daemon.getAttack(100, 2);
-  expect(result).toBe(90);
+  daemon.stoned = true;
+  daemon.attack = 100;
+  const result = daemon.attack;
+  expect(result).toBe(85);
 });
 
-test('Magician getStoned', () => {
+test('daemon getAttack', () => {
   const daemon = new Daemon();
-  const result = daemon.getStoned(100, 2);
-  expect(result).toBe(85);
+  daemon.stoned = true;
+  const result = daemon.stoned;
+  expect(result).toBe(true);
 });
